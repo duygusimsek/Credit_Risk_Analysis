@@ -25,7 +25,7 @@ Using the **75%-25% method** to split the data for training vs. testing, 51,352 
 
 ### Resampling Models to Predict Credit Risk
 
-#### Oversampling
+#### - Oversampling
 `The RandomOverSampler` model instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced. For this analysis, the oversampling result classified **51,352** records for each "high risk" and "low risk". 
 
 ![Image_3](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_3.png)
@@ -39,7 +39,7 @@ The **"High Risk"** precision rate was only 1% with the recall at 61% giving thi
 
 ![Image_5](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_5.png)
 
-#### SMOTE 
+#### - SMOTE 
 Synthetic Minority Oversampling Technique (SMOTE) model, like `RandomOverSampler` increases the size of the minority class by creating new values based on the value of the closest neighbors to the minority class instead of random selection.
 
 With `SMOTE` model, balanced accuracy score discreased to **62%** (0.623). 
@@ -49,3 +49,34 @@ With `SMOTE` model, balanced accuracy score discreased to **62%** (0.623).
 Like RandomOverSampler, the "High Risk" precision rate again was only 1% with the recall degraded to 61% giving this model an F1 score of 2%. "Low Risk" had a precision rate of 100% and recall at 64%.
 
 ![Image_7](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_7.png)
+
+#### - Undersampling
+Undersampling is another technique to address class imbalance. Undersampling takes the opposite approach of oversampling. Instead of increasing the number of the minority class, the size of the majority class is decreased.
+
+`ClusterCentroids` model, an algorithm that identifies clusters of the majority class to generate synthetic data points that are representative of the clusters. The model classified **260** records each as High Risk and Low Risk.
+
+![Image_8](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_8.png)
+
+Balanced accuracy score was lower than the oversampling models at **53%** (0.529).
+
+![Image_9](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_9.png)
+
+The **"High Risk"** precision rate again was only at 1% with the recall at 61% giving this model an F1 score of 1%.
+**"Low Risk"** had a precision rate of 100% and with a lower recall at 45% compared to the oversampling models.
+
+![Image_10](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_10.png)
+
+ ### SMOTEENN algorithm to Predict Credit Risk
+ #### - Combination Sampling
+ SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTEENN is a two-step process:
+1. Oversample the minority class with SMOTE.
+2. Clean the resulting data with an undersampling strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
+The model classified **68,458** records as "High Risk" and **62,022** as "Low Risk".
+
+![Image_11](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_11.png)
+
+The balanced accuracy score improved to **65%** (0.653) when using a combined sampling model.
+![Image_12](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_12.png)
+
+The **"High Risk"** precision rate did not improve was only 1%, however the recall increased to 69% giving this model an F1 score of 2%.**"Low Risk"** still showed a precision rate of 100% with the recall at 62%.
+![Image_13](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_13.png)
