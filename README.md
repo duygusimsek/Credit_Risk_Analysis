@@ -30,11 +30,22 @@ Using the **75%-25% method** to split the data for training vs. testing, 51,352 
 
 ![Image_3](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_3.png)
 
-To assess the accuracy score of the model,use the `balanced_accuracy_score` module was used and the accuracy score was found **65%**. However, because of this number can be misleading, especially in an unbalanced dataset, to assess the results further the `classification_report_imbalanced` module was used.
+To assess the accuracy score of the model,use the `balanced_accuracy_score` module was used and the accuracy score was found **65%** (0.645). However, because of this number can be misleading, especially in an unbalanced dataset, to assess the further results, the `classification_report_imbalanced` module was used.
 
 ![Image_4](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_4.png)
 
-The "High Risk" precision rate was only 1% with the recall at 61% giving this model an F1 score of 2%.
-"Low Risk" had a precision rate of 100% and recall at 68%.
+The **"High Risk"** precision rate was only 1% with the recall at 61% giving this model an F1 score of 2%.
+**"Low Risk"** had a precision rate of 100% and recall at 68%.
 
 ![Image_5](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_5.png)
+
+#### SMOTE 
+Synthetic Minority Oversampling Technique (SMOTE) model, like `RandomOverSampler` increases the size of the minority class by creating new values based on the value of the closest neighbors to the minority class instead of random selection.
+
+With `SMOTE` model, balanced accuracy score discreased to **62%** (0.623). 
+
+![Image_6](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_6.png)
+
+Like RandomOverSampler, the "High Risk" precision rate again was only 1% with the recall degraded to 61% giving this model an F1 score of 2%. "Low Risk" had a precision rate of 100% and recall at 64%.
+
+![Image_7](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_7.png)
