@@ -107,3 +107,4 @@ The **"High Risk** precision rate increased to 7% with the recall at 91% giving 
 
 ![Image_17.png](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_17.png)
 
+## Summary
