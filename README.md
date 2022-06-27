@@ -98,7 +98,7 @@ The top feature by importance was **"total_rec_prncp"** at 7.4% of the total.
 
 #### - EasyEnsembleClassifier
 `EasyEnsembleClassifier` model, a set of classifiers where individual decisions are combined to classify new examples.
-The balanced accuracy score increased to 92.5% with this model.
+The balanced accuracy score increased to **92.5%** with this model.
 
 ![Image_16](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_16.png)
 
