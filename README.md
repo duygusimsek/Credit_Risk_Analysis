@@ -80,3 +80,30 @@ The balanced accuracy score improved to **65%** (0.653) when using a combined sa
 
 The **"High Risk"** precision rate did not improve was only 1%, however the recall increased to 69% giving this model an F1 score of 2%.**"Low Risk"** still showed a precision rate of 100% with the recall at 62%.
 ![Image_13](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_13.png)
+
+### Ensemble Classifiers to Predict Credit Risk
+The two ensemble algorithms, `Balanced Random Forest Classifier` and `Easy Ensemble AdaBoost Classifier`, were compared to determine which algorithm results in the best performance and that reduce bias to predict credit risk.
+#### - BalancedRandomForestClassifier
+`BalancedRandomForestClassifier` model, two trees of the same size and equal size to the minority class are constructed to represent one for the majority class and one for the minority class.
+
+The balanced accuracy score increased to **78.8%** for this model.
+
+![Image_14](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_14.png)
+
+The **"High Risk** precision rate increased to 4% with the recall at 67% giving this model an F1 score of 7%.
+**"Low Risk"** still had a precision rate of 100% with the recall at 91%.
+The top feature by importance was **"total_rec_prncp"** at 7.4% of the total.
+
+![Image_15](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_15.png)
+
+#### - EasyEnsembleClassifier
+`EasyEnsembleClassifier` model, a set of classifiers where individual decisions are combined to classify new examples.
+The balanced accuracy score increased to 92.5% with this model.
+
+![Image_16](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_16.png)
+
+The **"High Risk** precision rate increased to 7% with the recall at 91% giving this model an F1 score of 14%.
+**"Low Risk"** still had a precision rate of 100% with the recall now at 94%.
+
+![Image_17.png](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_17.png)
+
