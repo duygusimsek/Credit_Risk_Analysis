@@ -26,7 +26,7 @@ Using the **75%-25% method** to split the data for training vs. testing, 51,352 
 ### Resampling Models to Predict Credit Risk
 
 #### - Oversampling
-`The RandomOverSampler` model instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced. For this analysis, the oversampling result classified **51,352** records for each "high risk" and "low risk". 
+`The RandomOverSampler` model instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced. For this analysis, the oversampling result classified **51,352** records for each "high risk" and "low risk". [credit_risk_resampling.ipynb](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb)
 
 ![Image_3](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_3.png)
 
@@ -71,7 +71,7 @@ The **"High Risk"** precision rate again was only at 1% with the recall at 61% g
  SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTEENN is a two-step process:
 1. Oversample the minority class with SMOTE.
 2. Clean the resulting data with an undersampling strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
-The model classified **68,458** records as "High Risk" and **62,022** as "Low Risk".
+The model classified **68,458** records as "High Risk" and **62,022** as "Low Risk". [credit_risk_ensemble.ipynb](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)
 
 ![Image_11](https://github.com/duygusimsek/Credit_Risk_Analysis/blob/main/Images/Image_11.png)
 
